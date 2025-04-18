@@ -1,0 +1,29 @@
+<!-- Header with cart logo -->
+<header class="cart-header">
+    <img src="assets/images/cart-logo.png" alt="Cart" class="cart-logo">
+    <span class="cart-count">Cart: {{ cartItems.length }} Items</span>
+  </header>
+  
+  <!-- Services section -->
+  <div class="container">
+    <div class="services-header">
+      <h2>Our Services</h2>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card" *ngFor="let service of services">
+        <img [src]="service.imageUrl" alt="{{ service.name }}" class="service-image">
+        <h3>{{ service.name }}</h3>
+        <p>{{ service.description }}</p>
+        
+        <!-- Add to Cart and Remove from Cart buttons -->
+        <div *ngIf="!isAddedToCart(service)">
+          <button (click)="addToCart(service)" class="add-to-cart-btn">Add to Cart</button>
+        </div>
+        <div *ngIf="isAddedToCart(service)">
+          <button (click)="removeFromCart(service)" class="remove-from-cart-btn">Remove from Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

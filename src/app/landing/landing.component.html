@@ -1,0 +1,23 @@
+<div class="landing-background">
+    <div class="slider">
+      <img *ngFor="let image of images; let i = index"
+           [src]="image"
+           [ngClass]="{'active': i === currentIndex}" />
+    </div>
+    <div class="overlay">
+        <div class="bio-content">
+            <h1>Welcome to Your Learning Journey with Moumita Mukherjee</h1>
+            <p>
+              Are you ready to unlock your true potential? I'm Moumita Mukherjee, an educator with a passion for nurturing young minds and helping students thrive. Based in Pune, I offer <strong>personalized home tuition</strong> for classes 3, 4, and 5, ensuring that every student receives the attention they need to excel academically.
+              <br><br>
+              But education doesn't stop in the classroom! I'm also a trained dancer, offering <strong>contemporary, classical, and hip-hop dance classes</strong> for students of all ages. Whether you're looking to express yourself through movement or stay fit and healthy, my <strong>Zumba sessions</strong> are designed to energize you while having fun.
+              <br><br>
+              My goal is simple – to guide you on your journey of personal and academic growth, empowering you to reach new heights and discover your true potential. Join me today, and let's take the first step towards achieving your dreams, together!
+            </p>
+          </div>
+          <div class="explore-services-container">
+            <button (click)="navigateToServices()" class="explore-services-btn">Explore the Services</button>
+          </div>
+    </div>
+  </div>
+  
