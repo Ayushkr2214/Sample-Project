@@ -1,8 +1,14 @@
-<!-- Header with cart logo -->
+<!-- Header with auth button on the left and cart on the right -->
 <header class="cart-header">
-    <img src="assets/images/cart-logo.png" alt="Cart" class="cart-logo">
+  <button class="auth-button">
+    SIGN IN / SIGN UP
+  </button>
+
+  <div class="cart-left">
+    <img src="assets/images/cart-logo.png" alt="Cart" class="cart-logo" />
     <span class="cart-count">Cart: {{ cartItems.length }} Items</span>
-  </header>
+  </div>
+</header>
   
   <!-- Services section -->
   <div class="container">
