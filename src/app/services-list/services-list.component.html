@@ -1,6 +1,6 @@
 <!-- Header with auth button on the left and cart on the right -->
 <header class="cart-header">
-  <button class="auth-button">
+  <button class="auth-button" (click)="openAuthModal()">
     SIGN IN / SIGN UP
   </button>
 
@@ -32,4 +32,34 @@
       </div>
     </div>
   </div>
-  
+
+  <!-- Simple auth popup (no actual flow yet) -->
+  <div class="auth-backdrop" *ngIf="showAuthModal" (click)="closeAuthModal()">
+    <div class="auth-modal" (click)="$event.stopPropagation()">
+      <button class="auth-close" type="button" (click)="closeAuthModal()">×</button>
+      <h3 class="auth-title">Create your account</h3>
+
+      <form class="auth-form">
+        <label class="auth-label">
+          Username
+          <input type="text" class="auth-input" placeholder="Enter username" />
+        </label>
+
+        <label class="auth-label">
+          Password
+          <input type="password" class="auth-input" placeholder="Enter password" />
+        </label>
+
+        <button type="button" class="auth-primary-button">
+          Register
+        </button>
+      </form>
+
+      <div class="auth-footer">
+        <span class="auth-footer-text">Already a user?</span>
+        <button type="button" class="auth-secondary-button">
+          Login
+        </button>
+      </div>
+    </div>
+  </div>

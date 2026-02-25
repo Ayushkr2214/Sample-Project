@@ -54,6 +54,7 @@ export class ServicesListComponent implements OnInit {
   ];
 
   cartItems: Service[] = [];  // Initialize cartItems as an array of Service objects
+  showAuthModal = false;
 
   constructor() { }
 
@@ -75,5 +76,13 @@ export class ServicesListComponent implements OnInit {
   // Remove the service from the cart
   removeFromCart(service: Service): void {
     this.cartItems = this.cartItems.filter(item => item.id !== service.id);
+  }
+
+  openAuthModal(): void {
+    this.showAuthModal = true;
+  }
+
+  closeAuthModal(): void {
+    this.showAuthModal = false;
   }
 }
