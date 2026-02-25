@@ -1,28 +1,64 @@
 <div class="landing-background">
-    <div class="slider">
-      <img *ngFor="let image of images; let i = index"
-           [src]="image"
-           [ngClass]="{'active': i === currentIndex}" />
-    </div>
-    <div class="overlay">
-        <div class="bio-content">
-            <h1>Welcome to Your Learning Journey with Moumita Mukherjee</h1>
-            <p>
-              Are you ready to unlock your true potential? I'm Moumita Mukherjee, an educator with a passion for nurturing young minds and helping students thrive. Based in Pune, I offer <strong>personalized home tuition</strong> for classes 3, 4, and 5, ensuring that every student receives the attention they need to excel academically.
-              <br><br>
-              But education doesn't stop in the classroom! I'm also a trained dancer, offering <strong>contemporary, classical, and hip-hop dance classes</strong> for students of all ages. Whether you're looking to express yourself through movement or stay fit and healthy, my <strong>Zumba sessions</strong> are designed to energize you while having fun.
-              <br><br>
-              My goal is simple – to guide you on your journey of personal and academic growth, empowering you to reach new heights and discover your true potential. Join me today, and let's take the first step towards achieving your dreams, together!
-            </p>
-          </div>
-          <div class="explore-services-container">
-            <button (click)="navigateToServices()" class="explore-services-btn">
-              Explore the Services
-            </button>
-            <button (click)="contactOnWhatsApp()" class="contact-btn">
-              Contact Me on WhatsApp
-            </button>
-          </div>
-    </div>
+
+  <!-- Image Slider -->
+  <div class="slider">
+    <img
+      *ngFor="let image of images; let i = index"
+      [src]="image"
+      [ngClass]="{ 'active': i === currentIndex }"
+      alt="Moumita Classes"
+    />
   </div>
-  
+
+  <!-- Dark Overlay -->
+  <div class="overlay">
+
+    <!-- Hero Content -->
+    <div class="bio-content">
+
+      <h1>Personalized Learning & Dance Classes with Moumita Mukherjee</h1>
+
+      <p class="subtitle">
+        Helping students grow academically while building confidence through movement and creativity.
+      </p>
+
+      <div class="about-text">
+        <p>
+          I offer <strong>personalized home tuition</strong> for classes 3, 4, and 5,
+          ensuring individual attention and strong academic foundations.
+        </p>
+
+        <p>
+          Along with education, I provide <strong>contemporary, classical, and hip-hop dance classes</strong>,
+          plus energetic <strong>Zumba sessions</strong> designed for fitness, fun, and self-expression.
+        </p>
+      </div>
+
+      <!-- Highlights (Trust Section) -->
+      <div class="highlights">
+        <span>✔ Personalized Attention</span>
+        <span>✔ Academic + Fitness Growth</span>
+        <span>✔ Dance for All Ages</span>
+      </div>
+
+    </div>
+
+    <!-- CTA Button -->
+    <div class="explore-services-container">
+      <button
+        (click)="navigateToServices()"
+        class="explore-services-btn">
+        Explore Services
+      </button>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Floating WhatsApp Button (always visible) -->
+<button
+  class="floating-whatsapp-btn"
+  (click)="contactOnWhatsApp()">
+  WhatsApp
+</button>
