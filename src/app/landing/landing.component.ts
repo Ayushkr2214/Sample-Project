@@ -32,4 +32,10 @@ export class LandingComponent implements OnInit {
     this.router.navigate(['/services']);
   }
 
+  contactOnWhatsApp() {
+    const message = 'Hello Moumita Mam, Can you tell me more about the classes ?';
+    const url = `https://wa.me/9113446738?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
+
 }

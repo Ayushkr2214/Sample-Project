@@ -96,3 +96,34 @@
 .explore-services-btn:hover {
     background-color: #d81b60; /* Darker pink on hover */
 }
+
+.contact-btn {
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    font-size: 0.8rem; /* Smaller than Explore button */
+    padding: 8px 16px; /* Roughly half the size */
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-left: 12px;
+    margin-top: 8px;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.contact-btn:hover {
+    background-color: #1ebe5d;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+    .explore-services-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .contact-btn {
+        margin-left: 0;
+    }
+}
